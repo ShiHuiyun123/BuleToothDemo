@@ -8,22 +8,16 @@ import android.bluetooth.BluetoothSocket;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.os.ParcelUuid;
-import android.os.Parcelable;
 import android.support.v4.util.ArrayMap;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
-import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -166,6 +160,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         }
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
 
     @Override
     public void onClick(View view) {
